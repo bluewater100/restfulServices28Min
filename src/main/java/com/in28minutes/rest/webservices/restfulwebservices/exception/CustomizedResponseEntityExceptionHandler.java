@@ -2,7 +2,6 @@ package com.in28minutes.rest.webservices.restfulwebservices.exception;
 
 import java.util.Date;
 
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

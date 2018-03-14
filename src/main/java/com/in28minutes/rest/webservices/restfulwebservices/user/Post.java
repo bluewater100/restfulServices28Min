@@ -18,12 +18,27 @@ public class Post {
     @ManyToOne(fetch= FetchType.LAZY)
     @JsonIgnore
     private User user;
+    
+    //I added this constructor to support my TDD test to add new posts
+    public Post(Integer id, String description, User user) {
+		super();
+		this.id = id;
+		this.description = description;
+		this.user = user;
+	}
 
-    public Integer getId() {
+
+    public Post() {
+		super();
+	}
+
+
+	public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+
+	public void setId(Integer id) {
         this.id = id;
     }
 

@@ -10,6 +10,9 @@ import java.util.List;
 @Component
 public class UserDaoService {
     private static List<User> users = new ArrayList<>();
+    
+    //I added this just to support retrievAllPosts for doing a Tdd test
+    private static List<Post> posts = new ArrayList<>();
 
     private static int usersCount = 3;
 
@@ -18,6 +21,13 @@ public class UserDaoService {
         users.add(new User(1, "Adam", new Date()));
         users.add(new User(2, "Eve", new Date()));
         users.add(new User(3, "Jack", new Date()));
+        
+        //I added this just to support retrievAllPosts for doing a Tdd test
+        // This is only used to support my userResourceTest
+        posts.add(new Post(1, "post1",null));
+        posts.add(new Post(2, "post2",null));
+        posts.add(new Post(3, "post3",null));
+        
     }
 
     public List<User> findAll() {
@@ -52,4 +62,7 @@ public class UserDaoService {
         return null;
     }
 
+    public List<Post> retrieveAllPosts() {
+    		return posts;
+    }
 }
