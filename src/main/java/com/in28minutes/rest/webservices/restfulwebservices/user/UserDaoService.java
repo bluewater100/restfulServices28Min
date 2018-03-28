@@ -22,8 +22,6 @@ public class UserDaoService {
         users.add(new User(2, "Eve", new Date()));
         users.add(new User(3, "Jack", new Date()));
         
-        //I added this just to support retrievAllPosts for doing a Tdd test
-        // This is only used to support my userResourceTest
         posts.add(new Post(1, "post1",null));
         posts.add(new Post(2, "post2",null));
         posts.add(new Post(3, "post3",null));

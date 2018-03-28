@@ -35,8 +35,7 @@ public class UserResourceTest {
 	
     @Test
     public void testRetrieveUser() throws Exception {
-    	
-    		//Note: The data for this test is loaded in the static block in UserDaoService   
+    	   
     		User mockUser = new User(20, "Albert",new Date());
 
         when(userDaoService.findOne(anyInt())).thenReturn(mockUser);
